@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up Form</title>
     <link rel="stylesheet" href="./style/style.css" />
+    <script src="./js/play.js" defer></script>
   </head>
   <body>
     <div class="left-div">
@@ -46,37 +47,59 @@
       </div>
       <div class="formDiv">
         <h3>Let's do this!</h3>
-        <form>
-          <div>
-            <label for="firstName"
-              >FIRST NAME<input type="text" id="firstName"
-            /></label>
+        <form action="" method="get" id="contactForm">
+          <div class="outerDivForm">
+            <div class="innerDivForm">
+              <label for="firstName">FIRST NAME </label>
+              <input type="text" id="firstName" name="firstName" />
+            </div>
+            <div class="innerDivForm">
+              <label for="lastName">LAST NAME</label>
+              <input type="text" id="lastName" name="lastName" />
+            </div>
           </div>
-          <div>
-            <label for="lastName"
-              >LAST NAME<input type="text" id="lastName" /></label
-            ><label for="email">EMAIL<input type="text" id="email" /></label>
+          <div class="outerDivForm">
+            <div class="innerDivForm">
+              <label for="email">EMAIL</label>
+              <input type="email" id="email" name="email" />
+            </div>
+            <div class="innerDivForm">
+              <label for="number">PHONE NUMBER</label>
+              <input
+                type="tel"
+                id="number"
+                name="phoneNumber"
+                pattern="[+]?[0-9]{2}\s?[0-9]{8,}"
+                placeholder="+31 612345678"
+              />
+            </div>
           </div>
-          <div>
-            <label for="number"
-              >PHONE NUMBER<input type="text" id="number"
-            /></label>
+          <div class="outerDivForm">
+            <div class="innerDivForm">
+              <label for="password">PASSWORD</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                class="error"
+              />
+            </div>
+            <div class="innerDivForm">
+              <label for="confirmPassword">CONFIRM PASSWORD</label>
+              <input
+                type="password"
+                id="confirmPassword"
+                name="confirmedPassword"
+                class="error"
+              />
+            </div>
           </div>
-          <div>
-            <label for="password"
-              >PASSWORD<input type="text" id="password"
-            /></label>
-          </div>
-          <div>
-            <label for="confirmPassword"
-              >CONFIRM PASSWORD<input type="text" id="confirmPassword"
-            /></label>
-          </div>
+          <p class="errorMessage"></p>
         </form>
       </div>
       <div class="accountDiv">
-        <button>Create Account</button>
-        <p>Already have an account? <a>Log in</a></p>
+        <button type="submit" form="contactForm">Create Account</button>
+        <p>Already have an account? <a href="" class="login">Log in</a></p>
       </div>
     </div>
   </body>
