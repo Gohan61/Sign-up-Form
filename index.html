@@ -50,18 +50,18 @@
         <form action="" method="get" id="contactForm">
           <div class="outerDivForm">
             <div class="innerDivForm">
-              <label for="firstName">FIRST NAME </label>
-              <input type="text" id="firstName" name="firstName" />
+              <label for="firstName">*FIRST NAME </label>
+              <input type="text" id="firstName" name="firstName" required />
             </div>
             <div class="innerDivForm">
-              <label for="lastName">LAST NAME</label>
-              <input type="text" id="lastName" name="lastName" />
+              <label for="lastName">*LAST NAME</label>
+              <input type="text" id="lastName" name="lastName" required />
             </div>
           </div>
           <div class="outerDivForm">
             <div class="innerDivForm">
-              <label for="email">EMAIL</label>
-              <input type="email" id="email" name="email" />
+              <label for="email">*EMAIL</label>
+              <input type="email" id="email" name="email" required />
             </div>
             <div class="innerDivForm">
               <label for="number">PHONE NUMBER</label>
@@ -76,21 +76,23 @@
           </div>
           <div class="outerDivForm">
             <div class="innerDivForm">
-              <label for="password">PASSWORD</label>
+              <label for="password">*PASSWORD</label>
               <input
                 type="password"
                 id="password"
                 name="password"
                 class="error"
+                required
               />
             </div>
             <div class="innerDivForm">
-              <label for="confirmPassword">CONFIRM PASSWORD</label>
+              <label for="confirmPassword">*CONFIRM PASSWORD</label>
               <input
                 type="password"
                 id="confirmPassword"
                 name="confirmedPassword"
                 class="error"
+                required
               />
             </div>
           </div>
