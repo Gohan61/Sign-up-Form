@@ -1,19 +1,19 @@
-const submitButton = document.querySelector("button");
-const errorMessage = document.querySelector(".errorMessage");
-const setPasswordBorder = document.querySelectorAll(".error");
-
-submitButton.addEventListener("click", (eventy) => {
-  checkPasswordsMatch(eventy);
-});
-
+var submitButton = document.querySelector("button");
+var errorMessage = document.querySelector(".errorMessage");
+var setPasswordBorder = document.querySelectorAll(".error");
+if (submitButton) {
+    submitButton.addEventListener("click", function (eventy) {
+        checkPasswordsMatch(eventy);
+    });
+}
 function checkPasswordsMatch(eventy) {
-  const password = document.querySelector("#password").value;
-  const confirmedPassword = document.querySelector("#confirmPassword").value;
-  if (password !== confirmedPassword) {
-    errorMessage.textContent = "*Passwords do not match";
-    eventy.preventDefault();
-    setPasswordBorder.forEach((el) =>
-      el.setAttribute("style", "border-color: red")
-    );
-  }
+    var password = (document.querySelector("#password")).value;
+    var confirmedPassword = (document.querySelector("#confirmPassword")).value;
+    if (password !== confirmedPassword && errorMessage) {
+        errorMessage.textContent = "*Passwords do not match";
+        eventy.preventDefault();
+        setPasswordBorder.forEach(function (el) {
+            return el.setAttribute("style", "border-color: red");
+        });
+    }
 }
